@@ -1,0 +1,7 @@
+tactic,technique_id,technique,evidence,source,confidence
+Initial Access,T1566.001,Phishing: Spearphishing Attachment,"FIN7 sent spearphishing emails containing malicious Microsoft Documents or RTF files",Mandiant/MITRE,high
+Execution,T1204.002,User Execution: Malicious File,"FIN7 lured victims to double-click on images in the attachments they sent which would then execute the hidden LNK file",MITRE,high
+Execution,T1218.005,System Binary Proxy Execution: Mshta,"FIN7 used mshta.exe to execute VBScript to execute malicious code on victim systems",MITRE,high
+Execution,T1059.005,Command and Scripting Interpreter: Visual Basic,"FIN7 used VBS scripts to help perform tasks on the victim's machine",MITRE,high
+Execution,T1059.001,Command and Scripting Interpreter: PowerShell,"FIN7 used a PowerShell script to launch shellcode that retrieved an additional payload",MITRE,high
+Persistence,T1053.005,Scheduled Task/Job: Scheduled Task,"FIN7 malware has created scheduled tasks to establish persistence",MITRE,high

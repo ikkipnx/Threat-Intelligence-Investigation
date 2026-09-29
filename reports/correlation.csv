@@ -1,0 +1,10 @@
+ioc_type,ioc_value,artifact,behavior,technique_id,technique,attack_stage,source,confidence
+hash,6a5a42ed234910121dbb7d1994ab5a5e,Doc33.docx,"Malicious Microsoft document used as spearphishing attachment",T1566.001,Phishing: Spearphishing Attachment,Initial Access,Mandiant/MITRE,high
+hash,1a9e113b2f3caa7a141a94c8bc187ea7,Mail.rtf,"Malicious RTF document used as spearphishing attachment",T1566.001,Phishing: Spearphishing Attachment,Initial Access,Mandiant/MITRE,high
+file,58d2a83f7778d5.36783181.vbs,"VBScript launcher","VBScript executed as part of the infection chain",T1059.005,Command and Scripting Interpreter: Visual Basic,Execution,Mandiant/MITRE,high
+file,58d2a83f777942.26535794.ps1,"PowerShell script","PowerShell used to launch shellcode and retrieve an additional payload",T1059.001,Command and Scripting Interpreter: PowerShell,Execution,Mandiant/MITRE,high
+file,58d2a83f777908.23270411.vbs,"Second VBScript","VBScript executed by mshta.exe during payload execution",T1059.005,Command and Scripting Interpreter: Visual Basic,Execution,Mandiant/MITRE,high
+file,"hidden LNK","Hidden LNK file","Victim interaction with the attachment resulted in execution of a hidden LNK file",T1204.002,User Execution: Malicious File,Execution,MITRE,high
+file,"hidden LNK","Hidden LNK file","LNK file initiated mshta.exe to execute malicious code",T1218.005,System Binary Proxy Execution: Mshta,Execution,Mandiant/MITRE,high
+domain,aaa[.]stage[.]14919005[.]www1[.]proslr3[.]com,"Cobalt Strike stager C2","Domain used as C2 infrastructure by the Cobalt Strike stager",,,"Command and Control",Mandiant,high
+ip,198[.]100[.]119[.]6,"HALFBAKED C2 server","IP address associated with the HALFBAKED C2 server",,,"Command and Control",Mandiant,high

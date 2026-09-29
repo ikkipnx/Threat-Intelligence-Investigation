@@ -1,0 +1,8 @@
+type,value,source,context,confidence
+hash,6a5a42ed234910121dbb7d1994ab5a5e,Mandiant,MD5 of Doc33.docx phishing lure,high
+hash,1a9e113b2f3caa7a141a94c8bc187ea7,Mandiant,MD5 of Mail.rtf phishing lure,high
+domain,aaa[.]stage[.]14919005[.]www1[.]proslr3[.]com,Mandiant,DNS C2 server used by the Cobalt Strike stager,high
+ip,198[.]100[.]119[.]6,Mandiant,HALFBAKED C2 server,high
+file,58d2a83f7778d5.36783181.vbs,Mandiant,VBScript launcher used in the infection chain,high
+file,58d2a83f777942.26535794.ps1,Mandiant,PowerShell script used in the infection chain,high
+file,58d2a83f777908.23270411.vbs,Mandiant,Second VBScript executed by mshta.exe in the infection chain,high

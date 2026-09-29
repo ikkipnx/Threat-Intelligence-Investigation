@@ -1,0 +1,8 @@
+type,value,related_artifact,role,campaign,source,confidence
+hash,6a5a42ed234910121dbb7d1994ab5a5e,Doc33.docx,Phishing lure,FIN7,Mandiant,high
+hash,1a9e113b2f3caa7a141a94c8bc187ea7,Mail.rtf,Phishing lure,FIN7,Mandiant,high
+domain,aaa[.]stage[.]14919005[.]www1[.]proslr3[.]com,Cobalt Strike stager C2,C2 infrastructure,FIN7,Mandiant,high
+ip,198[.]100[.]119[.]6,HALFBAKED C2 server,C2 infrastructure,FIN7,Mandiant,high
+file,58d2a83f7778d5.36783181.vbs,VBScript launcher,Execution,FIN7,Mandiant,high
+file,58d2a83f777942.26535794.ps1,Obfuscated PowerShell script,Cobalt Strike stager execution,FIN7,Mandiant,high
+file,58d2a83f777908.23270411.vbs,Second VBScript,Payload deployment and HALFBAKED execution,FIN7,Mandiant,high
