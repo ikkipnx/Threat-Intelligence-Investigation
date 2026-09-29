@@ -1,0 +1,31 @@
+title: Suspicious LNK Execution
+id: 7b2e4c91-5d63-48a7-b1f9-3e8d6a2c4f15
+status: experimental
+description: |
+  Detects execution of LNK files, which can be abused to initiate
+  malicious execution chains.
+  This detection hypothesis is derived from documented FIN7 activity.
+references:
+  - https://attack.mitre.org/techniques/T1204/002/
+  - https://cloud.google.com/blog/topics/threat-intelligence/fin7-phishing-lnk/
+author: ikkipnx
+date: 2026/09/29
+tags:
+  - attack.execution
+  - attack.t1204.002
+
+logsource:
+  category: process_creation
+  product: windows
+
+detection:
+  selection:
+    Image|endswith: '\explorer.exe'
+    CommandLine|contains: '.lnk'
+  condition: selection
+
+falsepositives:
+  - Legitimate user execution of LNK shortcuts
+  - Normal Windows desktop and application shortcuts
+
+level: medium

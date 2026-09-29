@@ -1,0 +1,32 @@
+title: Suspicious PowerShell Execution
+id: 4c7a2e91-6d3f-4b82-a5c8-91e7f3d2b6a4
+status: experimental
+description: |
+  Detects execution of PowerShell, which can be abused to execute
+  scripts, commands or additional payloads.
+  This detection hypothesis is derived from documented FIN7 activity.
+references:
+  - https://attack.mitre.org/techniques/T1059/001/
+  - https://cloud.google.com/blog/topics/threat-intelligence/fin7-phishing-lnk/
+author: ikkipnx
+date: 2026/09/29
+tags:
+  - attack.execution
+  - attack.t1059.001
+
+logsource:
+  category: process_creation
+  product: windows
+
+detection:
+  selection:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+  condition: selection
+
+falsepositives:
+  - Legitimate administrative or automation scripts
+  - Software deployment and management tools
+
+level: medium

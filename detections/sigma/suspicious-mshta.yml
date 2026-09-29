@@ -1,0 +1,29 @@
+title: Suspicious Mshta Execution
+id: 8f3e9d7a-7a9e-4e89-9f0e-1b8d6a4c2f11
+status: experimental
+description: |
+  Detects suspicious execution of mshta.exe, a Windows binary
+  that can be abused to execute scripts or remote content.
+  This detection hypothesis is derived from documented FIN7 activity.
+references:
+  - https://attack.mitre.org/techniques/T1218/005/
+  - https://cloud.google.com/blog/topics/threat-intelligence/fin7-phishing-lnk/
+author: ikkipnx
+date: 2026/09/29
+tags:
+  - attack.execution
+  - attack.t1218.005
+
+logsource:
+  category: process_creation
+  product: windows
+
+detection:
+  selection:
+    Image|endswith: '\mshta.exe'
+  condition: selection
+
+falsepositives:
+  - Legitimate administrative or software execution of mshta.exe
+
+level: medium
